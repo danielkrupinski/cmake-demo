@@ -7,4 +7,4 @@ set (Example_VERSION_PATCH 0)
 set (Example_VERSION_TWEAK 0)
 
 include_directories(${CMAKE_SOURCE_DIR}/include)
-file(GLOB_RECURSE SOURCE_FILES "${CMAKE_SOURCE_DIR/src/*.cpp}")
+file(GLOB_RECURSE SOURCE_FILES "${CMAKE_SOURCE_DIR}/src/*.cpp")
