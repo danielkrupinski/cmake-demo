@@ -8,3 +8,5 @@ set(Example_VERSION_TWEAK 0)
 
 include_directories(include)
 file(GLOB SOURCES "src/*.cpp")
+
+add_executable(Example ${SOURCES})
