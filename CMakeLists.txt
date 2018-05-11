@@ -11,4 +11,8 @@ set(Example_VERSION_TWEAK 0)
 include_directories(include)
 file(GLOB SOURCES "src/*.cpp")
 
+# For executable
 add_executable(Example ${SOURCES})
+
+# For shared library
+# add_library(Example SHARED ${SOURCES})
