@@ -12,7 +12,7 @@ include_directories(include)
 
 # For C
 file(GLOB SOURCES "src/*.c")
-
+set(CMAKE_C_FLAGS_RELEASE "-m64 -Ofast -flto -march=native -funroll-loops")
 
 # For C++
 file(GLOB SOURCES "src/*.cpp")
