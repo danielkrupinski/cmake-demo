@@ -15,6 +15,7 @@ file(GLOB SOURCES "src/*.c")
 
 # For C++
 file(GLOB SOURCES "src/*.cpp")
+set(CMAKE_CXX_FLAGS_RELEASE "-m64 -Ofast -flto -march=native -funroll-loops")
 
 # For executable
 add_executable(Example ${SOURCES})
