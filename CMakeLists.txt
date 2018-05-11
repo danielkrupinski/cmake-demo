@@ -9,6 +9,11 @@ set(Example_VERSION_PATCH 0)
 set(Example_VERSION_TWEAK 0)
 
 include_directories(include)
+
+# For C
+file(GLOB SOURCES "src/*.c")
+
+# For C++
 file(GLOB SOURCES "src/*.cpp")
 
 # For executable
