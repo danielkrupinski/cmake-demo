@@ -16,3 +16,4 @@ add_executable(Example ${SOURCES})
 
 # For shared library
 # add_library(Example SHARED ${SOURCES})
+# install(TARGETS Example DESTINATION /usr/lib)
