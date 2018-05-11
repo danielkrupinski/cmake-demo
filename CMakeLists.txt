@@ -13,13 +13,14 @@ include_directories(include)
 # For C
 file(GLOB SOURCES "src/*.c")
 
+
 # For C++
 file(GLOB SOURCES "src/*.cpp")
 set(CMAKE_CXX_FLAGS_RELEASE "-m64 -Ofast -flto -march=native -funroll-loops")
 
-# For executable
+# For an executable
 add_executable(Example ${SOURCES})
 
-# For shared library
+# For a shared library
 # add_library(Example SHARED ${SOURCES})
 # install(TARGETS Example DESTINATION /usr/lib)
