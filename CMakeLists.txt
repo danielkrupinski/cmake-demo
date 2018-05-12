@@ -23,5 +23,6 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 add_executable(Example ${SOURCES})
 
 # For a shared library
+# set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 # add_library(Example SHARED ${SOURCES})
 # install(TARGETS Example DESTINATION /usr/lib)
