@@ -1,2 +1,2 @@
 # CMake demo
-A CMake template for my projects
+A CMake template for both C and C++ projects.
