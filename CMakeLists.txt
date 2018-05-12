@@ -9,7 +9,7 @@ set(Example_VERSION_PATCH 0)
 set(Example_VERSION_TWEAK 0)
 
 include_directories(include)
-
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 # For C
 # file(GLOB SOURCES "src/*.c")
 # set(CMAKE_C_FLAGS_RELEASE "-m64 -Ofast -flto -march=native -funroll-loops")
