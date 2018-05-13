@@ -21,6 +21,7 @@ set(CMAKE_CXX_FLAGS_RELEASE "-m64 -Ofast -flto -march=native -funroll-loops")
 # For an executable
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 add_executable(Example ${SOURCES})
+target_link_libraries(Example lib1 lib2 lib3)
 
 # For a shared library
 # set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
