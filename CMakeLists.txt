@@ -26,4 +26,5 @@ target_link_libraries(Example lib1 lib2 lib3)
 #   For a shared library
 #   set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 #   add_library(Example SHARED ${SOURCES})
+#   target_link_libraries(Example lib1 lib2 lib3)
 #   install(TARGETS Example DESTINATION /usr/lib)
