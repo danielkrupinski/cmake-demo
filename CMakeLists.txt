@@ -28,3 +28,15 @@ target_link_libraries(Example lib1 lib2 lib3)
 #   add_library(Example SHARED ${SOURCES})
 #   target_link_libraries(Example lib1 lib2 lib3)
 #   install(TARGETS Example DESTINATION /usr/lib)
+
+if(UNIX)
+    if(APPLE)
+        # macOS
+    else(APPLE)
+        # Linux
+    endif(APPLE)
+elseif(WIN32)
+    # Windows
+else(UNIX)
+    message(FATAL_ERROR "Unknown platform!")
+endif(UNIX)
