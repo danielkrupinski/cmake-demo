@@ -16,7 +16,6 @@ include_directories(include)
 
 #   For C++
 file(GLOB SOURCES "src/*.cpp")
-set(CMAKE_CXX_FLAGS_RELEASE "-std=c++17 -m64 -Ofast -flto -march=native -funroll-loops -fno-builtin -s")
 
 #   For an executable
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
@@ -34,6 +33,9 @@ if(UNIX)
         # macOS
     else(APPLE)
         # Linux
+        #
+        # For C++
+        set(CMAKE_CXX_FLAGS_RELEASE "-std=c++17 -m64 -Ofast -flto -march=native -funroll-loops -fno-builtin -s")
     endif(APPLE)
 elseif(WIN32)
     # Windows
