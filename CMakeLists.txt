@@ -12,7 +12,6 @@ include_directories(include)
 
 #   For C
 #   file(GLOB SOURCES "src/*.c")
-#   set(CMAKE_C_FLAGS_RELEASE "-std=c18 -m64 -Ofast -flto -march=native -funroll-loops -fno-builtin -s")
 
 #   For C++
 file(GLOB SOURCES "src/*.cpp")
@@ -36,6 +35,9 @@ if(UNIX)
         #
         # For C++
         set(CMAKE_CXX_FLAGS_RELEASE "-std=c++17 -m64 -Ofast -flto -march=native -funroll-loops -fno-builtin -s")
+        #
+        # For C
+        set(CMAKE_C_FLAGS_RELEASE "-std=c18 -m64 -Ofast -flto -march=native -funroll-loops -fno-builtin -s")
     endif(APPLE)
 elseif(WIN32)
     # Windows
