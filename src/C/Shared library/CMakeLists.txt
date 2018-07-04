@@ -3,10 +3,10 @@ project(C_Shared_Library)
 
 set(CMAKE_BUILD_TYPE Release)
 
-set(Example_VERSION_MAJOR 1)
-set(Example_VERSION_MINOR 0)
-set(Example_VERSION_PATCH 0)
-set(Example_VERSION_TWEAK 0)
+set(C_Shared_Library_VERSION_MAJOR 1)
+set(C_Shared_Library_VERSION_MINOR 0)
+set(C_Shared_Library_VERSION_PATCH 0)
+set(C_Shared_Library_VERSION_TWEAK 0)
 
 include_directories(include)
 
@@ -20,6 +20,7 @@ install(TARGETS C_Shared_Library DESTINATION /usr/lib)
 if(UNIX)
     if(APPLE)
         # macOS
+        message(FATAL_ERROR "macOS is unsupported!")
     else(APPLE)
         # Linux
         set(CMAKE_C_FLAGS_RELEASE "-std=c18 -m64 -Ofast -flto -march=native -funroll-loops -fno-builtin -s")
