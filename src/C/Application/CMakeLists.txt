@@ -22,7 +22,7 @@ if(UNIX)
         message(FATAL_ERROR "macOS is unsupported!")
     else(APPLE)
         # Linux
-        set(CMAKE_C_FLAGS_RELEASE "-std=c18 -m64 -Ofast -flto -march=native -funroll-loops -fno-builtin -s")
+        set(CMAKE_C_FLAGS_RELEASE "-std=c18 -m64 -Ofast -flto -march=native -funroll-loops -fno-builtin -s -ffunction-sections")
     endif(APPLE)
 elseif(WIN32)
     # Windows
