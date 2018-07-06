@@ -22,7 +22,11 @@ if(UNIX)
         message(FATAL_ERROR "macOS is unsupported!")
     else(APPLE)
         # Linux
-        set(CMAKE_CXX_FLAGS_RELEASE "-std=c++17 -m64 -Ofast -flto -march=native -funroll-loops -fno-builtin -s -ffunction-sections -fno-rtti")
+        if("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
+            set(CMAKE_CXX_FLAGS_RELEASE "-std=c++17 -m64 -Ofast -flto -march=native -funroll-loops -fno-builtin -s -ffunction-sections -fno-rtti")
+        else("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
+            message(FATAL_ERROR "Please install GCC!")
+        endif("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
     endif(APPLE)
 elseif(WIN32)
     # Windows
