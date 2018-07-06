@@ -15,7 +15,7 @@ file(GLOB SOURCES "src/*.cpp")
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 add_library(CPP_Shared_Library SHARED ${SOURCES})
 target_link_libraries(CPP_Shared_Library lib1 lib2 lib3)
-install(TARGETS CPP_Shared_Library DESTINATION /usr/lib)
+install(TARGETS CPP_Shared_Library DESTINATION ${CMAKE_SOURCE_DIR}/lib)
 
 if(UNIX)
     if(APPLE)
