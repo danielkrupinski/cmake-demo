@@ -23,6 +23,7 @@ if(UNIX)
     else(APPLE)
         # Linux
         if("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
+            set(CMAKE_CXX_FLAGS_DEBUG "-std=c++17 -m64 -g -march=native")
             set(CMAKE_CXX_FLAGS_RELEASE "-std=c++17 -m64 -Ofast -flto -march=native -funroll-loops -fno-builtin -s -ffunction-sections -fno-rtti")
         else("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
             message(FATAL_ERROR "Please install GCC!")
