@@ -26,6 +26,7 @@ if(UNIX)
     endif(APPLE)
 elseif(WIN32)
     # Windows
+    set(CMAKE_CXX_FLAGS_RELEASE "/GL /OPT:REF,ICF /fp:fast")
 else(UNIX)
     message(FATAL_ERROR "Unknown platform!")
 endif(UNIX)
