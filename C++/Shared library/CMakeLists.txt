@@ -33,7 +33,7 @@ if(UNIX)
 elseif(WIN32)
     # Windows
     if("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
-        set(CMAKE_CXX_FLAGS_RELEASE "/GL /OPT:REF,ICF /fp:fast /arch:AVX2")
+        set(CMAKE_CXX_FLAGS_RELEASE "/GL /Gy /OPT:REF,ICF /fp:fast /arch:AVX2")
     else("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
         message(FATAL_ERROR "Please install Microsoft Visual Studio!")
     endif("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
