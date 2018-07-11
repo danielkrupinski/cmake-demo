@@ -25,7 +25,7 @@ if(UNIX)
         # Linux
         if("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
             set(CMAKE_CXX_FLAGS_DEBUG "-std=c++17 -m64 -g -Wall -march=native")
-            set(CMAKE_CXX_FLAGS_RELEASE "-std=c++17 -m64 -Wall -Ofast -march=native -flto -fuse-linker-plugin -funroll-loops -fno-builtin -s -ffunction-sections -fno-rtti")
+            set(CMAKE_CXX_FLAGS_RELEASE "-std=c++17 -m64 -Wall -Ofast -march=native -flto -fuse-linker-plugin -funroll-loops -fno-builtin -s -ffunction-sections -fdata-sections -fno-rtti")
         else("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
             message(FATAL_ERROR "Please install GCC!")
         endif("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
