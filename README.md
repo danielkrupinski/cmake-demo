@@ -1,2 +1,8 @@
 # CMake demo
-A CMake template for both C and C++ projects.
+CMake scripts for:
+* C
+    * Application
+    * Shared library
+* C++
+    * Application
+    * Shared library
