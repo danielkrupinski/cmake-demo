@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.10.2)
+cmake_minimum_required(VERSION 3.11.0)
 project(CPP_Shared_Library)
 
 if(CMAKE_CONFIGURATION_TYPES)
