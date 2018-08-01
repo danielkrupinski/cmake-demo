@@ -1,13 +1,4 @@
 cmake_minimum_required(VERSION 3.11.0)
-
-file(WRITE "${CMAKE_BINARY_DIR}/MakeRulesOverwrite.cmake"
-[=[
-    if (MSVC)   
-        set(CMAKE_CXX_STANDARD_LIBRARIES_INIT "%(AdditionalDependencies)")
-    endif()
-]=] )
-set(CMAKE_USER_MAKE_RULES_OVERRIDE "${CMAKE_BINARY_DIR}/MakeRulesOverwrite.cmake") 
-
 project(CPP_Application)
 
 if(CMAKE_CONFIGURATION_TYPES)
